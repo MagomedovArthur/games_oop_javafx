@@ -45,7 +45,7 @@ class BishopBlackTest {
     @Test
     void whenNotDiagonal() {
         BishopBlack bishopBlack = new BishopBlack(Cell.D8);
-        Boolean result = bishopBlack.isDiagonal(bishopBlack.position(), Cell.D8);
+        Boolean result = bishopBlack.isDiagonal(bishopBlack.position(), Cell.E8);
         assertFalse(result);
     }
 
@@ -53,7 +53,7 @@ class BishopBlackTest {
     void wayC1toG5() {
         BishopBlack bishopBlack = new BishopBlack(Cell.C1);
         Cell[] actualWay = bishopBlack.way(Cell.G5);
-        Cell[] expectedWay = {Cell.C1, Cell.D2, Cell.E3, Cell.F4, Cell.G5};
+        Cell[] expectedWay = {Cell.D2, Cell.E3, Cell.F4, Cell.G5};
         assertTrue(Arrays.equals(expectedWay, actualWay));
     }
 
@@ -61,7 +61,7 @@ class BishopBlackTest {
     void wayA8toD5() {
         BishopBlack bishopBlack = new BishopBlack(Cell.A8);
         Cell[] actualWay = bishopBlack.way(Cell.D5);
-        Cell[] expectedWay = {Cell.A8, Cell.B7, Cell.C6, Cell.D5};
+        Cell[] expectedWay = {Cell.B7, Cell.C6, Cell.D5};
         assertTrue(Arrays.equals(expectedWay, actualWay));
     }
 }
